@@ -1,4 +1,4 @@
-const assert = require("Assert");
+const assert = require("assert");
 const {sum, mult, dif} = require('../index.js');
 
 describe('function sum', () => {
@@ -7,13 +7,17 @@ describe('function sum', () => {
     });
 
     it('should function sum not equals 0', () => {
-        assert.notEqual(sum(2, 4), 0)
+        assert.notEqual(sum(2, 4), 0);
     });
 });
 
-
-it('should function mult works correct', () => {
-    assert.equal(mult(2, 4), 8)
+describe('function mult',() => {
+    it('should function mult works correct', () => {
+        assert.equal(mult(2, 4), 8);
+    });
+    it('should function mult works incorrectly', () => {
+        assert.notEqual(mult(2,4),6);
+    });
 });
 
 it('should function dif equals -2',() => {
