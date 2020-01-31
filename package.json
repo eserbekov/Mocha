@@ -1,7 +1,7 @@
 {
   "name": "mocha1",
   "version": "1.0.0",
-  "description": "",
+  "description": "* Mocha is a feature-rich JavaScript test framework running on Node.js \r and in the browser, making asynchronous testing simple and fun. \r Mocha tests run serially, allowing for flexible and accurate reporting, \r while mapping uncaught exceptions to the correct test cases. Hosted on GitHub.",
   "main": "index.js",
   "scripts": {
     "test": "mocha",
@@ -11,6 +11,18 @@
   "license": "ISC",
   "dependencies": {
     "chai": "^4.2.0",
-    "mocha": "^7.0.0"
-  }
+    "mocha": "^7.0.1"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eserbekov/Mocha.git"
+  },
+  "bugs": {
+    "url": "https://github.com/eserbekov/Mocha/issues"
+  },
+  "homepage": "https://github.com/eserbekov/Mocha#readme"
 }
