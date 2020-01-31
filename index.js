@@ -29,7 +29,18 @@ function comparison(a,b){
 }
 // Функция возведения в степень числа
 function power(num,pow){
-    if (num === 0) return undefined;
+    if (num === 0) return null;
     return (pow !== 0)? +(Math.pow(num,pow)).toFixed(2) : 1;
 }
-module.exports = {sum, mult, dif, concat, isAdult, comparison, power};
+
+// Функция нахождения четных чисел в массиве
+function arrayEvenNumber(arr){
+    const evenNumber = [];
+    for(let i = 0; i < arr.length; i++){
+      if(arr[i] % 2 === 0 && arr[i] > 0 && typeof(arr[i])==='number' ) {
+          evenNumber.push(arr[i]);
+      }
+    }return evenNumber;
+}
+
+module.exports = {sum, mult, dif, concat, isAdult, comparison, power,arrayEvenNumber};

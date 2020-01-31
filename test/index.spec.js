@@ -1,5 +1,5 @@
 const assert = require("assert");
-const {sum, mult, dif, concat, isAdult, comparison, power} = require('../index.js');
+const {sum, mult, dif, concat, isAdult, comparison, power, arrayEvenNumber} = require('../index.js');
 
 describe('function sum', () => {
     it('should function sum(2, 4) equals 6', () => {
@@ -51,11 +51,17 @@ describe('function isAdult',() => {
     it('should person is Adult', () => {
         assert.equal(isAdult(40), 'Adult')
     });
-    it('should age does not fill the bill', () => {
+    it('should age equal 15 does not fill the bill', () => {
         assert.equal(isAdult(15), `Your age does not fill the bill`)
     });
-    it('should function isAdult contains boundary variable',() => {
+    it('should function isAdult contains boundary variable equal 18',() => {
         assert.equal(isAdult(18), 'Adult')
+    });
+    it('should function isAdult contains boundary variable equal 65',() => {
+        assert.equal(isAdult(65), 'Adult')
+    });
+    it('should age equal 66 does not fill the bill',() => {
+        assert.equal(isAdult(66), `Your age does not fill the bill`)
     });
 });
 // Тестирование функции сравнения
@@ -75,8 +81,8 @@ describe ('function comparison', () => {
 });
 // Тестирование функции возведения в степень
 describe('function power',() => {
-   it('should return undefined', () => {
-       assert.equal(power(0,3), undefined)
+   it('should return null', () => {
+       assert.equal(power(0,3), null)
    });
     it('should return 1', () => {
         assert.equal(power(10,0), 1)
@@ -89,5 +95,18 @@ describe('function power',() => {
     });
     it('variable pow is not natural number ', () => {
         assert.equal(power(2,-2), 0.25)
+    });
+});
+
+//Тест функции массив четных чисел
+describe('function arrayEvenNumber', () => {
+    it('function arrayEvenNumber return array [2,6]',() => {
+        assert.deepEqual(arrayEvenNumber([2,'green', '3', 6, 0]),[2,6])
+    });
+    it('function arrayEvenNumber return null',() => {
+        assert.deepEqual(arrayEvenNumber([]), [])
+    });
+    it('function arrayEvenNumber not even numbers',() => {
+        assert.deepEqual(arrayEvenNumber([1,-2,'8','five',]), [])
     });
 });
